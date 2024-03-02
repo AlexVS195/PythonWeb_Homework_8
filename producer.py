@@ -6,7 +6,7 @@ import json
 
 # Підключення до бази даних MongoDB
 connect("myFirstDatabase",
-        host="mongodb+srv://osymashk:<Langeron2024!>@cluster0.oepyyjj.mongodb.net/",
+        host="mongodb+srv://osymashk:Langeron2024!@cluster0.oepyyjj.mongodb.net/",
         retryWrites=True,
         w="majority",
         appName="Cluster0")

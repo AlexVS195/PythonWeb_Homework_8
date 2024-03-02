@@ -1,4 +1,4 @@
-from models import Quote
+from models import Author, Quote
 
 def search_quotes(query):
     if query.startswith("name:"):

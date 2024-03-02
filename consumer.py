@@ -1,10 +1,11 @@
 import pika
-from mongoengine import connect, Document, StringField, BooleanField
 import json
+from mongoengine import connect, Document, StringField, BooleanField
+
 
 # Підключення до бази даних MongoDB
 connect("myFirstDatabase",
-        host="mongodb+srv://osymashk:<Langeron2024!>@cluster0.oepyyjj.mongodb.net/",
+        host="mongodb+srv://osymashk:Langeron2024!@cluster0.oepyyjj.mongodb.net/",
         retryWrites=True,
         w="majority",
         appName="Cluster0")
@@ -13,7 +14,9 @@ connect("myFirstDatabase",
 class Contact(Document):
     fullname = StringField(required=True)
     email = StringField(required=True)
+    phone_number = StringField() 
     message_sent = BooleanField(default=False)
+    contact_method = StringField() 
 
 # Функція для імітації надсилання електронного листа
 def send_email(contact_id):

@@ -6,14 +6,13 @@ import re
 
 # Підключення до бази даних Atlas MongoDB
 connect("myFirstDatabase",
-        host="mongodb+srv://osymashk:<Langeron2024!>@cluster0.oepyyjj.mongodb.net/",
+        host="mongodb+srv://osymashk:Langeron2024!@cluster0.oepyyjj.mongodb.net/",
         retryWrites=True,
         w="majority",
         appName="Cluster0")
 
 # Підключення до Redis
 redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
-
 # Функція для кешування результату
 def cache_result(key, value):
     redis_client.set(key, json.dumps(value))
@@ -26,7 +25,7 @@ def get_cached_result(key):
     return None
 
 # Завантаження даних з файлу authors.json
-with open("authors.json", "r", encoding="utf-8") as file:
+with open("C:/Users/AlexPC/Repository/PythonWeb/Homework_8/authors.json", "r", encoding="utf-8") as file:
     authors_data = json.load(file)
     for author_data in authors_data:
         author = Author(
@@ -38,7 +37,7 @@ with open("authors.json", "r", encoding="utf-8") as file:
         author.save()
 
 # Завантаження даних з файлу quotes.json
-with open("quotes.json", "r", encoding="utf-8") as file:
+with open("C:/Users/AlexPC/Repository/PythonWeb/Homework_8/quotes.json", "r", encoding="utf-8") as file:
     quotes_data = json.load(file)
     for quote_data in quotes_data:
         author = Author.objects(fullname=quote_data["author"]).first()

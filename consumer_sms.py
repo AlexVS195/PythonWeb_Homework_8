@@ -1,10 +1,12 @@
+import json
 import pika
 from mongoengine import connect, Document, StringField, BooleanField
-import json
+from models import ContactMethod
+
 
 # Підключення до бази даних MongoDB
 connect("myFirstDatabase",
-        host="mongodb+srv://osymashk:<Langeron2024!>@cluster0.oepyyjj.mongodb.net/",
+        host="mongodb+srv://osymashk:Langeron2024!@cluster0.oepyyjj.mongodb.net/",
         retryWrites=True,
         w="majority",
         appName="Cluster0")
@@ -15,6 +17,7 @@ class Contact(Document):
     email = StringField(required=True)
     phone_number = StringField()
     message_sent = BooleanField(default=False)
+    contact_method = StringField(choices=[(method.value, method.name) for method in ContactMethod], default=ContactMethod.EMAIL.value)
 
 # Підключення до RabbitMQ
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))

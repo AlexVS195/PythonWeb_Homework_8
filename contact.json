@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "65e36982c8b6cca228737308"
+  },
+  "fullname": "Tristan Rodriguez",
+  "email": "gregorymoore@gmail.com",
+  "phone_number": "(631)712-6195",
+  "message_sent": false,
+  "contact_method": "email"
+},
+{
+  "_id": {
+    "$oid": "65e36983c8b6cca228737309"
+  },
+  "fullname": "Richard Yoder",
+  "email": "kkennedy@gmail.com",
+  "phone_number": "+1-555-803-5191x3638",
+  "message_sent": false,
+  "contact_method": "sms"
+},
+{
+  "_id": {
+    "$oid": "65e36983c8b6cca22873730a"
+  },
+  "fullname": "William Green",
+  "email": "aaron00@best-kelly.com",
+  "phone_number": "766.541.0292x8456",
+  "message_sent": false,
+  "contact_method": "sms"
+},
+{
+  "_id": {
+    "$oid": "65e36983c8b6cca22873730b"
+  },
+  "fullname": "Connie Blair",
+  "email": "louis91@gmail.com",
+  "phone_number": "6040622565",
+  "message_sent": false,
+  "contact_method": "email"
+},
+{
+  "_id": {
+    "$oid": "65e36983c8b6cca22873730c"
+  },
+  "fullname": "Brian Schultz",
+  "email": "emitchell@reed.com",
+  "phone_number": "134.485.5340",
+  "message_sent": false,
+  "contact_method": "sms"
+}]

@@ -25,4 +25,4 @@ class Contact(Document):
     email = StringField(required=True)
     phone_number = StringField()
     message_sent = BooleanField(default=False)
-    contact_method = StringField(choices=[method.value for method in ContactMethod], default=ContactMethod.EMAIL.value)
+    contact_method = StringField(choices=[(method.value, method.name) for method in ContactMethod], default=ContactMethod.EMAIL.value)
